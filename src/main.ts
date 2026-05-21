@@ -22,6 +22,8 @@ app.innerHTML = `
   </main>
 `;
 
+const baseUrl = import.meta.env.BASE_URL;
+
 function renderEvent(event: TimelineEvent) {
   return `
     <article class="event-card">
@@ -39,7 +41,7 @@ function renderEvent(event: TimelineEvent) {
                 <figure class="photo">
                   <img
                     class="photo-frame"
-                    src="${event.image.src}"
+                    src="${resolveAssetPath(event.image.src)}"
                     alt="${event.image.alt}"
                     loading="lazy"
                   />
@@ -51,4 +53,12 @@ function renderEvent(event: TimelineEvent) {
       </div>
     </article>
   `;
+}
+
+function resolveAssetPath(path: string) {
+  if (!path.startsWith("/")) {
+    return path;
+  }
+
+  return `${baseUrl}${path.slice(1)}`;
 }
