@@ -37,14 +37,12 @@ function renderEvent(event: TimelineEvent) {
             event.image
               ? `
                 <figure class="photo">
-                  <div
+                  <img
                     class="photo-frame"
-                    role="img"
-                    aria-label="${event.image.label}"
-                    style="--photo-a: ${event.image.palette[0]}; --photo-b: ${event.image.palette[1]};"
-                  >
-                    <span>${event.image.label}</span>
-                  </div>
+                    src="${event.image.src}"
+                    alt="${event.image.alt}"
+                    loading="lazy"
+                  />
                 </figure>
               `
               : ""

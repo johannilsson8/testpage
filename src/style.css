@@ -186,30 +186,14 @@ select {
 }
 
 .photo-frame {
-  position: relative;
-  min-height: 220px;
-  overflow: hidden;
+  display: block;
+  width: 100%;
+  min-height: 400px;
+  max-height: 1500px;
   border-radius: 20px;
-  background:
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.18), transparent 30%),
-    linear-gradient(135deg, var(--photo-a), var(--photo-b));
-}
-
-.photo-frame::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 46%;
-  background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.62));
-}
-
-.photo-frame span {
-  position: absolute;
-  inset: auto 14px 12px 14px;
-  z-index: 1;
-  font-size: 0.88rem;
-  font-weight: 600;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  object-fit: cover;
+  background: rgba(15, 23, 42, 0.5);
 }
 
 @media (min-width: 900px) {
@@ -260,7 +244,8 @@ select {
   }
 
   .photo-frame {
-    min-height: 160px;
+    min-height: 300px;
+    max-height: 380px;
   }
 }
 

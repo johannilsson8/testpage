@@ -17,5 +17,6 @@ Small TypeScript starter for a mobile-first timeline page, tuned for Safari on i
 ## Notes
 
 - The layout uses a wider centered shell sized for iPhone 16 Pro landscape and safe-area padding.
-- Timeline entries are plain TypeScript data, so you can replace the sample content with real events and images later.
+- Timeline entries are plain TypeScript data in `src/timeline.ts`.
+- Put your image files in `public/images/` and point each event to them with `image: { src: "/images/your-file.jpg", alt: "Description" }`.
 - The Vite dev server is configured to listen on `0.0.0.0` so it is easier to test on a phone.
