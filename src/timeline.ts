@@ -186,8 +186,8 @@ export const timelineEvents: TimelineEvent[] = [
   {
     date: "22 Maj 2026",
     title: "Dag 1722",
-    body: "Mysdag i Göteborg",
-    image: { src: "/images/images.png", alt: "Mysdag i Göteborg" },
+    body: "???",
+    image: { src: "/images/images.png", alt: "???" },
   },
   {
     date: "23 Maj 2026",
