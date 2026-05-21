@@ -193,6 +193,6 @@ export const timelineEvents: TimelineEvent[] = [
     date: "23 Maj 2026",
     title: "Dag 1723",
     body: "Göteborgsvarvet",
-    image: { src: "/images/images.png", alt: "Göteborgsvarvet" },
+    image: { src: "/images/IMG_7896.jpg", alt: "Göteborgsvarvet" },
   },
 ];
