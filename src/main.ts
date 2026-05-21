@@ -3,6 +3,7 @@ import { hero } from "./content";
 import { timelineEvents, type TimelineEvent } from "./timeline";
 
 const app = document.querySelector<HTMLDivElement>("#app");
+const baseUrl = import.meta.env.BASE_URL;
 
 if (!app) {
   throw new Error("App root not found");
@@ -21,8 +22,6 @@ app.innerHTML = `
     </section>
   </main>
 `;
-
-const baseUrl = import.meta.env.BASE_URL;
 
 function renderEvent(event: TimelineEvent) {
   return `
